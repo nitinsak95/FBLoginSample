@@ -12,9 +12,12 @@
 		A431778F20B6D92A00016513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A431778D20B6D92A00016513 /* Main.storyboard */; };
 		A431779120B6D92A00016513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A431779020B6D92A00016513 /* Assets.xcassets */; };
 		A431779420B6D92A00016513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A431779220B6D92A00016513 /* LaunchScreen.storyboard */; };
+		C600CB52459F8F86F10E0B41 /* Pods_fbsampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAF4926A9C8C00BACE463DA /* Pods_fbsampleSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26B4495E17EFF52FA1EE17C2 /* Pods-fbsampleSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbsampleSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbsampleSDK/Pods-fbsampleSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		62F2AD4FD321626974F67EFF /* Pods-fbsampleSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbsampleSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbsampleSDK/Pods-fbsampleSDK.release.xcconfig"; sourceTree = "<group>"; };
 		A431778620B6D92A00016513 /* fbsampleSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbsampleSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A431778920B6D92A00016513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A431778B20B6D92A00016513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A431779020B6D92A00016513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A431779320B6D92A00016513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A431779520B6D92A00016513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDAF4926A9C8C00BACE463DA /* Pods_fbsampleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbsampleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C600CB52459F8F86F10E0B41 /* Pods_fbsampleSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44EF963ED3A590019152C331 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26B4495E17EFF52FA1EE17C2 /* Pods-fbsampleSDK.debug.xcconfig */,
+				62F2AD4FD321626974F67EFF /* Pods-fbsampleSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		843BD20F1F9D7206C037F960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF4926A9C8C00BACE463DA /* Pods_fbsampleSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A431777D20B6D92A00016513 = {
 			isa = PBXGroup;
 			children = (
 				A431778820B6D92A00016513 /* fbsampleSDK */,
 				A431778720B6D92A00016513 /* Products */,
+				44EF963ED3A590019152C331 /* Pods */,
+				843BD20F1F9D7206C037F960 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A431779820B6D92A00016513 /* Build configuration list for PBXNativeTarget "fbsampleSDK" */;
 			buildPhases = (
+				C561501FF56EA577A093CF5E /* [CP] Check Pods Manifest.lock */,
 				A431778220B6D92A00016513 /* Sources */,
 				A431778320B6D92A00016513 /* Frameworks */,
 				A431778420B6D92A00016513 /* Resources */,
+				B7D5900C03D9A8ACCFCA74A8 /* [CP] Embed Pods Frameworks */,
+				91F8F6679A1B1704701268AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91F8F6679A1B1704701268AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbsampleSDK/Pods-fbsampleSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7D5900C03D9A8ACCFCA74A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fbsampleSDK/Pods-fbsampleSDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbsampleSDK/Pods-fbsampleSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C561501FF56EA577A093CF5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fbsampleSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A431778220B6D92A00016513 /* Sources */ = {
@@ -272,9 +361,11 @@
 		};
 		A431779920B6D92A00016513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26B4495E17EFF52FA1EE17C2 /* Pods-fbsampleSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YHKB8C6MSB;
 				INFOPLIST_FILE = fbsampleSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = affixus.fbsampleSDK;
@@ -286,9 +377,11 @@
 		};
 		A431779A20B6D92A00016513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F2AD4FD321626974F67EFF /* Pods-fbsampleSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YHKB8C6MSB;
 				INFOPLIST_FILE = fbsampleSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = affixus.fbsampleSDK;
